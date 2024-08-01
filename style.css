@@ -10,7 +10,7 @@ body {
     font-weight: 100;
     text-align: center;
     margin: auto;
-    padding: 35px 15px 50px;
+    padding: 35px 15px 25px;
 }
 
 h1 {
@@ -93,6 +93,17 @@ textarea {
     font-family: 'Helvetica Neue', arial;
     letter-spacing: 2px;
     resize: vertical;
+}
+
+footer {
+    margin-top: 35px;
+    color: #fff;
+    font-weight: 400;
+}
+
+footer a {
+    color: #4088e2;
+    text-decoration: underline;
 }
 
 @keyframes shake {
