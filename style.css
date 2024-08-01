@@ -1,0 +1,168 @@
+body {
+    background-image: url(images/bg.jpg);
+    font-family: 'Helvetica Neue', arial;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover; 
+    font-family: 'Helvetica Neue', arial;
+    font-weight: 100;
+    text-align: center;
+    margin: auto;
+    padding: 35px 15px 50px;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 3em;
+    color: #fff;
+}
+
+p {
+    margin: 0;
+    font-weight: 400;
+    color: #fff;
+}
+
+.eight-ball {
+    width: 410px;
+    height: 410px;
+    margin: 0 auto;
+    margin-top: 25px;
+    background-image: url('images/8ball.webp');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.eight-ball.animate {
+    overflow: hidden;
+    animation: shake 3s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+.triangle {
+    font-family: Helvetica, Arial;
+    color: #ffffff;
+    box-sizing: border-box;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 142px;
+    height: 130px;
+    display: block;
+    margin-top: 160px;
+    background-image: url(images/triangle.webp);
+    font-size: 1rem;
+    padding-top: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.triangle span {
+    white-space: pre;
+    display: block;
+    content: '?';
+    font-size: 30px;
+    padding-top: 20px;
+}
+
+.triangle span.animate {
+    animation: appear 1s ease-in;
+}
+
+textarea {
+    width: 50%;;
+    margin: 20px;
+    margin-top: 25px;
+    padding: 10px;
+    color: #000;
+    font-weight: 300;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor:text;
+    font-size: 1.2em;
+    font-family: 'Helvetica Neue', arial;
+    letter-spacing: 2px;
+    resize: vertical;
+}
+
+@keyframes shake {
+    10%,
+    95% {
+        transform: translate3d(-1px, 2px, 0);
+    }
+
+    15%,
+    40%,
+    65%,
+    90% {
+        transform: translate3d(2px, 5px, 0);
+    }
+
+    20%,
+    30%,
+    45%,
+    55%,
+    70%,
+    80% {
+        transform: translate3d(-4px, 10px, 0);
+    }
+
+    25%,
+    35%,
+    50%,
+    60%,
+    75%,
+    85% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+        filter: blur(2px);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0.5px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    textarea {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    textarea {
+        width: 75%;
+    }
+
+    .eight-ball {
+        width: 300px;
+        height: 300px;
+    }
+
+    .triangle {
+        width: 110px;
+        height: 130px;
+        display: block;
+        margin-top: 100px;
+    }
+}
